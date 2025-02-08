@@ -11,45 +11,58 @@
 </head>
 <body class="relative h-screen">
 <div class="fixed bottom-4 right-4">
-    <!-- Circular Button with group class -->
-    <div class="webchat" style="height: 550px; width: 350px;">
+    <!-- Circular Button -->
+    <button id="toggleChat" class="bg-blue-500 text-white p-3 rounded-full shadow-lg">
+        💬
+    </button>
+
+    <!-- WebChat Container (Initially Hidden) -->
+    <div id="webchatContainer" class="hidden fixed bottom-16 right-4 bg-white shadow-lg rounded-lg" style="height: 500px; width: 300px;">
         <iframe
                 style="height: 100%; width: 100%; border: none;"
                 srcdoc='
-    <!doctype html>
-    <html lang="en">
-      <head></head>
-      <body>
-      <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-       <script src="https://files.bpcontent.cloud/2025/02/08/15/20250208154525-948XZV8D.js"></script>
-        <script defer>
-          window.botpress.on("webchat:ready", (conversationId) => {
-            botpress.open();
-          });
+                <!doctype html>
+                <html lang="en">
+                  <head></head>
+                  <body>
+                  <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+                   <script src="https://files.bpcontent.cloud/2025/02/08/15/20250208154525-948XZV8D.js"></script>
+                    <script defer>
+                      window.botpress.on("webchat:ready", (conversationId) => {
+                        botpress.open();
+                      });
 
-          window.botpress.init({
-            "botId": "cd3b6853-491e-45e7-a860-93148781cb83",
-            "configuration": {
-              "website": {},
-              "email": {},
-              "phone": {},
-              "termsOfService": {},
-              "privacyPolicy": {},
-              "color": "#3B82F6",
-              "variant": "light",
-              "themeMode": "light",
-              "fontFamily": "inter",
-              "radius": 1
-            },
-            "clientId": "f0361c02-5eec-4655-b382-30daee3fe861"
-          });
-        </script>
-      </body>
-    </html>'
+                      window.botpress.init({
+                        "botId": "cd3b6853-491e-45e7-a860-93148781cb83",
+                        "configuration": {
+                          "website": {},
+                          "email": {},
+                          "phone": {},
+                          "termsOfService": {},
+                          "privacyPolicy": {},
+                          "color": "#3B82F6",
+                          "variant": "light",
+                          "themeMode": "light",
+                          "fontFamily": "inter",
+                          "radius": 1
+                        },
+                        "clientId": "f0361c02-5eec-4655-b382-30daee3fe861"
+                      });
+                    </script>
+                  </body>
+                </html>'
         ></iframe>
     </div>
 </div>
-    <header>
+
+<script>
+    document.getElementById('toggleChat').addEventListener('click', function () {
+        var chatBox = document.getElementById('webchatContainer');
+        chatBox.classList.toggle('hidden');
+    });
+</script>
+
+<header>
         <section class="flex justify-between items-center px-8 py-4 shadow-md">
         <!-- Logo -->
         <div class="flex items-center space-x-2">
