@@ -800,6 +800,9 @@
   .min-h-screen {
     min-height: 100vh;
   }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
@@ -2226,12 +2229,6 @@
       margin-top: calc(var(--spacing) * 1);
     }
   }
-  .after\:block {
-    &::after {
-      content: var(--tw-content);
-      display: block;
-    }
-  }
   .after\:h-1 {
     &::after {
       content: var(--tw-content);
@@ -2242,6 +2239,26 @@
     &::after {
       content: var(--tw-content);
       width: 100%;
+    }
+  }
+  .after\:border-b {
+    &::after {
+      content: var(--tw-content);
+      border-bottom-style: var(--tw-border-style);
+      border-bottom-width: 1px;
+    }
+  }
+  .after\:border-b-2 {
+    &::after {
+      content: var(--tw-content);
+      border-bottom-style: var(--tw-border-style);
+      border-bottom-width: 2px;
+    }
+  }
+  .after\:border-red-600 {
+    &::after {
+      content: var(--tw-content);
+      border-color: var(--color-red-600);
     }
   }
   .after\:bg-red-600 {
