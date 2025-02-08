@@ -6,8 +6,49 @@
     <title>MediCare</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./output.css">
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/02/08/15/20250208154525-948XZV8D.js"></script>
 </head>
-<body>
+<body class="relative h-screen">
+<div class="fixed bottom-4 right-4">
+    <!-- Circular Button with group class -->
+    <div class="webchat" style="height: 550px; width: 350px;">
+        <iframe
+                style="height: 100%; width: 100%; border: none;"
+                srcdoc='
+    <!doctype html>
+    <html lang="en">
+      <head></head>
+      <body>
+      <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+       <script src="https://files.bpcontent.cloud/2025/02/08/15/20250208154525-948XZV8D.js"></script>
+        <script defer>
+          window.botpress.on("webchat:ready", (conversationId) => {
+            botpress.open();
+          });
+
+          window.botpress.init({
+            "botId": "cd3b6853-491e-45e7-a860-93148781cb83",
+            "configuration": {
+              "website": {},
+              "email": {},
+              "phone": {},
+              "termsOfService": {},
+              "privacyPolicy": {},
+              "color": "#3B82F6",
+              "variant": "light",
+              "themeMode": "light",
+              "fontFamily": "inter",
+              "radius": 1
+            },
+            "clientId": "f0361c02-5eec-4655-b382-30daee3fe861"
+          });
+        </script>
+      </body>
+    </html>'
+        ></iframe>
+    </div>
+</div>
     <header>
         <section class="flex justify-between items-center px-8 py-4 shadow-md">
         <!-- Logo -->
