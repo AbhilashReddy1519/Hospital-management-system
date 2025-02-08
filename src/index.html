@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="flex justify-between items-center px-8 py-4 shadow-md">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+            <img src="logo.png" alt="Cedars Sinai" class="h-8">
+            <span class="text-gray-700 text-lg font-semibold">Cedars Sinai</span>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="flex space-x-6">
+            <a href="#" class="text-black font-semibold relative after:block after:w-full after:h-1 after:bg-red-600 after:mt-1">For Patients</a>
+            <a href="#" class="text-gray-600 hover:text-black">For Providers</a>
+            <a href="#" class="text-gray-600 hover:text-black">Health Sciences University</a>
+        </nav>
+
+        <!-- Contact & Language -->
+        <div class="flex items-center space-x-4">
+            <span class="text-gray-700 font-semibold">1-800-CEDARS-1</span>
+            <div class="flex items-center space-x-1 cursor-pointer">
+                <img src="globe-icon.png" alt="Language" class="h-5">
+                <span class="text-gray-600 hover:text-black">English</span>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
